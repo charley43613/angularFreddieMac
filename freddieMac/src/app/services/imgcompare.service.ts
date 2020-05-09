@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ImgCompObj } from '../classes/imgCompObj/imgCompObj';
+import { MsgStack } from '../classes/msgStack/MsgStack';
 
 
 @Injectable({
@@ -8,16 +9,15 @@ import { ImgCompObj } from '../classes/imgCompObj/imgCompObj';
 })
 export class ImgcompareService {
 
-  constructor(private httpClient: HttpClient) { }
-  baseurl = `http://localhost:9009`;
-  imgCompApi = `/appname`
 
-  performImgCompare(img1: string, img2: string, img3: string){
-    let imgCompObj1 = new ImgCompObj();
-    imgCompObj1.img1 = img1;
-    imgCompObj1.img2 = img2;
-    imgCompObj1.img3 = img3;
-    return this.httpClient.post(`${this.baseurl}${this.imgCompApi}`, imgCompObj1);
+  constructor(private httpClient: HttpClient) { }
+  baseurl = `http://localhost:8080/`;
+  imgCompApi = `img-service-fm/awsImg/doit`;
+
+  performImgCompare(imgCompObj: ImgCompObj){
+
+    // expecting 2 strings back, with boolean of true
+    return this.httpClient.post<MsgStack>(`${this.baseurl}${this.imgCompApi}`, imgCompObj);
 
   }
 

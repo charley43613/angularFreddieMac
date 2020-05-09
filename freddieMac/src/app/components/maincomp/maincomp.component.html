@@ -1,15 +1,30 @@
 <div class="row">
     <!--placeholder img, label and img url input X3-->
     <div class="col-lg-4 text-center">
-        <img src="https://photos.puppyspot.com/6/listing/608266/photo/5003478_large-resize.jpg" width="200" height="270">
+        <h1>Img A</h1>
+        <img src="{{img1}}" width="200" height="270">
+        <input type="text" [(ngModel)]="img1">
     </div>
 
     <div class="col-lg-4 text-center">
-        <img src="https://www.thesprucepets.com/thmb/zHl4_24aWU_WgqHMAlrEZhC_qL8=/2121x1414/filters:fill(auto,1)/Germanshepherdpuppy-0e2cd16b74264a7f96a05d29d5ac2659.jpg"width="200" height="270">
+        <h1>Img B</h1>
+        <img src="{{img2}}"width="200" height="270">
+        <input type="text" [(ngModel)]="img2">
     </div>
 
     <div class="col-lg-4 text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSGerx32zagkrREVquUNexxIbZl-rjcrndXaE30FR7a7nkQKQjj&usqp=CAU"width="200" height="270">
+        <h1>Img C</h1>
+        <img src="{{img3}}"width="200" height="270">
+        <input type="text" [(ngModel)]="img3">
     </div>
+
+        <button type="button" class="btn btn-primary mycustombtn" (click)="requestImgComparison()">Compare image urls</button>
+        <div *ngIf="aTobMsg != null">
+            <p>"{{aTobMsg}}"</p>
+            <p>"{{aTocMsg}}"</p>
+        </div>
+        <button type="button" (click)="changeMsgs()">Change messages!</button>
+   
+
 
 </div>
