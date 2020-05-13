@@ -15,7 +15,9 @@ export class ImgcompareService {
   imgCompApi = `img-service-fm/awsImg/doit`;
 
   performImgCompare(imgCompObj: ImgCompObj){
-
+    console.log(imgCompObj.img1);
+    console.log(imgCompObj.img2);
+    console.log(imgCompObj.img3);
     // expecting 2 strings back, with boolean of true
     return this.httpClient.post<MsgStack>(`${this.baseurl}${this.imgCompApi}`, imgCompObj);
 
