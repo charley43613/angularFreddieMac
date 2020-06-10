@@ -1,5 +1,5 @@
 export class MsgStack{
-    msg1: string;
-    msg2: string;
+    imgAtoB: string;
+    imgAtoC: string;
     success: boolean;
 }

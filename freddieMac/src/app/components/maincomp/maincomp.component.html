@@ -1,5 +1,10 @@
 <div class="row">
     <!--placeholder img, label and img url input X3-->
+    <div class="col-lg-12 text-center">
+        <h2>Input image urls and compare img A to img B and img C</h2>
+    
+    </div>
+
     <div class="col-lg-4 text-center">
         <h1>Img A</h1>
         <img src="{{img1}}" width="200" height="270">
@@ -18,11 +23,13 @@
         <input type="text" [(ngModel)]="img3">
         
     </div>
-
+    <div class="col-lg-12 text-center">
         <button type="button" class="btn btn-primary mycustombtn" (click)="requestImgComparison()">Compare image urls</button>
+    </div>
+    <div class="col-lg-12 text-center">
         <div *ngIf="aTobMsg != null">
-            <p>"{{aTobMsg}}"</p>
-            <p>"{{aTocMsg}}"</p>
+            <h2>"{{aTobMsg}}"</h2>
+            <h2>"{{aTocMsg}}"</h2>
         </div>
 
 

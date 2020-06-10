@@ -12,9 +12,10 @@ export class ImgcompareService {
 
 
   constructor(private httpClient: HttpClient) { }
-  baseurl = `http://ec2-18-216-218-2.us-east-2.compute.amazonaws.com:8080/`;
+  
+  baseurl = `http://ec2-18-219-252-219.us-east-2.compute.amazonaws.com:8080/`;
   imgCompApi = `img-service-fm/awsImg/doit`;
-  // baseurl = `http://localhost:9000/`;
+  // baseurl = `http://localhost:8080/`;
   // imgCompApi = `awsImg/doit`;
   
 

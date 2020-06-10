@@ -35,28 +35,26 @@ export class MaincompComponent implements OnInit {
     this.imgcompserv.performImgCompare(imgCompObj).subscribe(msgStack=>{
       console.log('response from api is...')
       console.log(msgStack);
+      console.log('attempting logging properties of msg stack');
+      console.log(msgStack.imgAtoB + "is message 1");
+      console.log(msgStack.imgAtoC + "is msg2");
       if(msgStack.success == true){
-        this.aTobMsg = msgStack.msg1;
-        this.aTocMsg = msgStack.msg2;
+        console.log(msgStack.imgAtoB + "is message 1(inside msgStack.success condition)");
+        console.log(msgStack.imgAtoC + "is msg2 message 1(inside msgStack.success condition)");
+        console.log("assigning aToB and aToC");
+        this.aTobMsg = msgStack.imgAtoB;
+        this.aTocMsg = msgStack.imgAtoC;
       }
 
     }, error =>
     {console.log(error);
-    console.log('YIKES AN ERROR')
+      
+
+     this.aTobMsg = "Error in image search/server connection";
     });
   }
 
-  changeMsgs(){
-    if (!this.aTobMsg) {
-      this.aTobMsg = 'fuck you atob';
-      this.aTocMsg = 'fuck you atoc';
-    }
-    else{
-      this.aTobMsg = null;
-      this.aTocMsg = null;
-
-    }
     
-  }
+  
 
 }
