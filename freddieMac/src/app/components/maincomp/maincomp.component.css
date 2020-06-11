@@ -1,0 +1,41 @@
+h1{
+    
+    font-size:4em;
+    font-family: "Lucida Console";
+
+}
+h2{
+    font-weight: bold;
+    margin-left: 1em;
+    margin-top: 2em;
+    text-align: left;
+    font-size: 2em;
+    font-family: "Lucida Console";
+    color: white;
+    
+}
+.divider{
+    margin-top: 1em;
+}
+hr{
+    height:1px;
+    border-width:0;
+    color:gray;
+    padding-top:2px;
+    background-color:gray;
+}
+.title-bar{
+
+    min-height: 20vh;
+    min-width: 85vw;
+    background-color: #161D29;
+    border-radius: 12px;
+    padding: 20px;
+
+
+      
+}
+p{
+    font-family: "Lucida Console";
+
+}

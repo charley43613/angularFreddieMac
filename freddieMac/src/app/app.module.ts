@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { MaincompComponent } from './components/maincomp/maincomp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImgcompareService } from './services/imgcompare.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaincompComponent
+    MaincompComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [ImgcompareService],
   bootstrap: [AppComponent]

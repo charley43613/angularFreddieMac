@@ -1,0 +1,43 @@
+footer{
+    background-color: #161D29;
+    color: #fff;
+    padding: 30px;
+}
+section{
+    margin: 0 auto;
+    text-align: center;
+    border-color: 
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+a:hover{
+    text-decoration: underline;
+}
+
+.copy{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fa-icons{
+    font-size: 10em;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.fa-icons:hover{
+   cursor: pointer;
+
+}

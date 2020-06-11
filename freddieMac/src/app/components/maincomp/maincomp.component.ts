@@ -5,7 +5,7 @@ import { ImgCompObj } from 'src/app/classes/imgCompObj/imgCompObj';
 @Component({
   selector: 'app-maincomp',
   templateUrl: './maincomp.component.html',
-  styleUrls: ['./maincomp.component.css']
+  styleUrls: ['./maincomp.component.scss']
 })
 export class MaincompComponent implements OnInit {
   
@@ -15,12 +15,20 @@ export class MaincompComponent implements OnInit {
 
   aTobMsg:string = null;
   aTocMsg:string = null;
+
+  status: boolean = true;
   
 
   constructor(private imgcompserv: ImgcompareService) { }
 
   ngOnInit(): void {
   }
+
+
+
+clickEvent(){
+    this.status = !this.status;       
+}
 
   requestImgComparison(){
     //push the urls to the back-end, the back-end will send a response if the images were found online and respond with comparisons
